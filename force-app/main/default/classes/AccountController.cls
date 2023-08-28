@@ -20,4 +20,5 @@ public with sharing class AccountController {
     }
 
     //Test Branch 1
+    //This is a branch 2
 }
