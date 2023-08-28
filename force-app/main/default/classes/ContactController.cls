@@ -10,4 +10,6 @@ public with sharing class ContactController {
     public static Contact getContact(Id contId){
         return [SELECT Id,Name FROM Contact WHERE Id=:contId]; 
     }
+
+    //Addition made in br1
 }
