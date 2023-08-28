@@ -18,4 +18,7 @@ public with sharing class AccountController {
     public static List<Opportunity> getRelatedOpps(Id accId){
         return [SELECT Id,Name FROM Opportunity WHERE Id=:accId];
     }
+
+
+    //Test Branch 1
 }
