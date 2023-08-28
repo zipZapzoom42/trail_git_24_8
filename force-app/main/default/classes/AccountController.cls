@@ -8,6 +8,10 @@ public with sharing class AccountController {
     }
 
     public static Account getOneAccount(Id accId){
-        return [SELECT Id,Name FROM Account WHERE Id=:accId];
+        return [SELECT Id,Name FROM Account WHERE Id=:accId LIMIT 1];
+    }
+
+    public static List<Contact> getRelatedContact(Id accId){
+        return [SELECT Id FROM Contact WHERE AccountId=:accId];
     }
 }
