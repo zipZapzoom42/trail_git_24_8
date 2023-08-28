@@ -10,4 +10,8 @@ public with sharing class AccountController {
     public static Account getOneAccount(Id accId){
         return [SELECT Id,Name FROM Account WHERE Id=:accId];
     }
+
+    public static List<Opportunity> getRelatedOpps(Id accId){
+        return [SELECT Id,Name FROM Opportunity WHERE Id=:accId];
+    }
 }
