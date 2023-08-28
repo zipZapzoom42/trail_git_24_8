@@ -14,4 +14,8 @@ public with sharing class AccountController {
     public static List<Contact> getRelatedContact(Id accId){
         return [SELECT Id FROM Contact WHERE AccountId=:accId];
     }
+
+    public static List<Opportunity> getRelatedOpps(Id accId){
+        return [SELECT Id,Name FROM Opportunity WHERE Id=:accId];
+    }
 }
